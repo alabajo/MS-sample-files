@@ -1,0 +1,203 @@
+<model version="XMLMOD03" createdBy="11.8.12.0">
+  <location>C:\Test Scenarios\Test Scenario 013</location>
+  <author />
+  <description xml:space="preserve" />
+  <settings>
+    <input>
+      <date_pattern>M/D/Y</date_pattern>
+      <first_year_of_century>50</first_year_of_century>
+      <active_patterns>D,DT,T</active_patterns>
+      <decimal_char>.</decimal_char>
+      <leading_chars>0</leading_chars>
+      <ignore_form_feeds>false</ignore_form_feeds>
+      <ignore_ctrl_chars>false</ignore_ctrl_chars>
+      <input_encoding>ANSI</input_encoding>
+      <input_ascii>false</input_ascii>
+      <input_locale>Use current system locale</input_locale>
+      <japan_font>MS Gothic</japan_font>
+      <simp_chinese_font>NSimSun</simp_chinese_font>
+      <trad_chinese_font>MingLiU</trad_chinese_font>
+      <cjk_detect_mode>2</cjk_detect_mode>
+      <case_sensitive_traps>false</case_sensitive_traps>
+      <trap_char_type>E</trap_char_type>
+      <auto_trim>false</auto_trim>
+      <force_break max_page_lines="100" />
+    </input>
+    <grid suppress_zero="false" null_as="(Null)">
+      <table header_lines="1" data_lines="1" />
+    </grid>
+    <comment_position>top</comment_position>
+    <views>
+      <report>
+        <font face="Courier New" size="10" color="0" />
+      </report>
+      <table>
+        <font face="Tahoma" size="10" color="0" />
+      </table>
+      <summary>
+        <font face="Tahoma" size="10" color="0" />
+      </summary>
+    </views>
+    <export>
+      <dbf_field_naming>false</dbf_field_naming>
+      <database>
+        <summary names_from_fields="false" />
+      </database>
+      <text names_row="false" spacing="false" pad_with_zeros="false" character_set="ANSI" output_codepage="Use current system locale" eof="false">
+        <delimited character="," quoted="false" names_row_quotes="false" format_dates_with_dashes="false" />
+      </text>
+      <excel apply_formatting="true" enable_advanced="true" />
+    </export>
+    <time_intervals>
+      <year format_mask="&amp;[yyyy]" />
+      <halfyear format_mask="H&amp;[halfyear]-&amp;[yy]" />
+      <quarter format_mask="Q&amp;[qtr]-&amp;[yy]" />
+      <month format_mask="&amp;[monthname]-&amp;[yy]" />
+      <week format_mask="W&amp;[week]-&amp;[yy]" start_day="0" partial_first_week_is_1="false" />
+      <day format_mask="&amp;[dayofyear]" />
+      <iso_year format_mask="&amp;[isoyear]" />
+      <iso_week format_mask="&amp;[isoyear]-W&amp;[isoweek]" />
+      <fiscal_year format_mask="FY&amp;[fendyear]" year_type="month_based" start_or_end="start_on_first_of_month" reference_month="1" reference_day="1" />
+      <fiscal_halfyear format_mask="FH&amp;[fhalfyear]-&amp;[fendyy]" />
+      <fiscal_quarter format_mask="FQ&amp;[fqtr]-&amp;[fendyy]" />
+      <fiscal_period format_mask="FP&amp;[fperiod]-&amp;[fendyy]" period_type="calendar_months" period_of_53rd_week="12" />
+      <fiscal_week format_mask="FW&amp;[fweek]-&amp;[fendyy]" start_day="0" partial_first_week_is_1="false" />
+    </time_intervals>
+  </settings>
+  <external_models>
+    <external_model expose_functions="true" function_link_type="">
+      <name>Default</name>
+      <path>C:\Users\Public\Documents\Monarch\Models\UserDefinedFunctions.xmod</path>
+    </external_model>
+  </external_models>
+  <fields>
+    <table_field style="database">
+      <name>Customer</name>
+      <size>25</size>
+      <type>C</type>
+      <sequence>1</sequence>
+      <display_length>25</display_length>
+      <alignment>L</alignment>
+      <import_field>
+        <original_name>Customer</original_name>
+        <orig_type>C</orig_type>
+        <source_type>0</source_type>
+      </import_field>
+    </table_field>
+    <table_field style="database">
+      <name>Contact</name>
+      <size>18</size>
+      <type>C</type>
+      <sequence>2</sequence>
+      <display_length>18</display_length>
+      <alignment>L</alignment>
+      <import_field>
+        <original_name>Contact</original_name>
+        <orig_type>C</orig_type>
+        <source_type>0</source_type>
+      </import_field>
+    </table_field>
+    <table_field style="database">
+      <name>Address 1</name>
+      <size>27</size>
+      <type>C</type>
+      <sequence>3</sequence>
+      <display_length>27</display_length>
+      <alignment>L</alignment>
+      <import_field>
+        <original_name>Address 1</original_name>
+        <orig_type>C</orig_type>
+        <source_type>0</source_type>
+      </import_field>
+    </table_field>
+    <table_field style="database">
+      <name>Address 2</name>
+      <size>25</size>
+      <type>C</type>
+      <sequence>4</sequence>
+      <display_length>25</display_length>
+      <alignment>L</alignment>
+      <import_field>
+        <original_name>Address 2</original_name>
+        <orig_type>C</orig_type>
+        <source_type>0</source_type>
+      </import_field>
+    </table_field>
+    <table_field style="database">
+      <name>City</name>
+      <size>18</size>
+      <type>C</type>
+      <sequence>5</sequence>
+      <display_length>18</display_length>
+      <alignment>L</alignment>
+      <import_field>
+        <original_name>City</original_name>
+        <orig_type>C</orig_type>
+        <source_type>0</source_type>
+      </import_field>
+    </table_field>
+    <table_field style="database">
+      <name>Postal Code</name>
+      <size>10</size>
+      <type>C</type>
+      <sequence>6</sequence>
+      <display_length>10</display_length>
+      <alignment>L</alignment>
+      <import_field>
+        <original_name>Postal Code</original_name>
+        <orig_type>C</orig_type>
+        <source_type>0</source_type>
+      </import_field>
+    </table_field>
+    <table_field style="database">
+      <name>State</name>
+      <size>5</size>
+      <type>C</type>
+      <sequence>7</sequence>
+      <display_length>5</display_length>
+      <alignment>L</alignment>
+      <import_field>
+        <original_name>State</original_name>
+        <orig_type>C</orig_type>
+        <source_type>0</source_type>
+      </import_field>
+    </table_field>
+    <table_field style="database">
+      <name>Country</name>
+      <size>11</size>
+      <type>C</type>
+      <sequence>8</sequence>
+      <display_length>11</display_length>
+      <alignment>L</alignment>
+      <import_field>
+        <original_name>Country</original_name>
+        <orig_type>C</orig_type>
+        <source_type>0</source_type>
+      </import_field>
+    </table_field>
+    <table_field style="database">
+      <name>Account Number</name>
+      <size>18</size>
+      <type>N</type>
+      <decimal>0</decimal>
+      <format_type>0</format_type>
+      <sequence>9</sequence>
+      <display_length>10</display_length>
+      <alignment>R</alignment>
+      <import_field>
+        <original_name>Account Number</original_name>
+        <orig_type>C</orig_type>
+        <source_type>0</source_type>
+      </import_field>
+    </table_field>
+  </fields>
+  <charts />
+  <db_import>
+    <delimited character="," input_ascii="false" names_row="true" text_qualifier="&quot;" skip_at_start="0" embedded_line_breaks="false">
+      <input_encoding>ANSI</input_encoding>
+    </delimited>
+  </db_import>
+  <audit>
+    <save action="Created" author="Alesia_Shamai" time="2014-02-12T16:10:11" />
+  </audit>
+</model>
